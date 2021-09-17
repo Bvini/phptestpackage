@@ -1,5 +1,5 @@
 {
-    "name": "testpackage/php",
+    "name": "testphppackage/php",
     "description": "Demo Package",
     "type": "library",
     "license": "MIT",
