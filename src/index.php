@@ -8,27 +8,14 @@ class index {
 
     private $param;
 
-    public function __construct($coin = '') {
+    public function __construct($private_key, $public_key, $coin = '') {
         $this->param['coin'] = $coin;
 
         //get credential
-        $credentials = $this->get_credentials($coin);
-        if(isset($credentials['private_key'], $credentials['private_key'])) {
-            $this->param['private_key'] = $credentials['private_key'];
-            $this->param['public_key'] = $credentials['public_key'];
+        if(isset($private_key, $public_key)) {
+            $this->param['private_key'] = $private_key;
+            $this->param['public_key'] = $public_key;
         }
-    }
-
-    public function get_credentials() {
-        $get_details = array();
-
-        //get details from config folder
-        $credentials = config('test_plugin');
-        if(count($credentials) > 0) {
-            $get_details['private_key'] = $credentials['private_key'];
-            $get_details['public_key'] = $credentials['public_key'];        
-        }
-        return $get_details;
     }
 
     //get balance
