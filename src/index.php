@@ -1,6 +1,6 @@
 <?php 
 
-namespace Testpackage\\HelloWorld;
+namespace Testpackage\HelloWorld;
 
 class index
 {
