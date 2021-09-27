@@ -8,7 +8,7 @@ you have to include namespace of package wherever you want to use this library l
 ```
 require_once __DIR__ . '/vendor/autoload.php';
 
-include('phptest/src/index.php');
+include('phptestpackage/src/index.php');
 
 ```
 after using name space you can access all the methods of library by creating object of class like ,
